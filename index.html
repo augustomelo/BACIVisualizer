@@ -1,15 +1,76 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="bower_components/material-design-icons/iconfont/material-icons.css" rel="stylesheed">
-        <link type="text/css" rel="stylesheet" href="bower_components/materialize/bin/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css"/>
+        <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"/>
+
+        <link rel="shortcut icon" href="resources/images/icon/favicon.ico" type="image/x-icon"/>
+
+        <link rel="stylesheet" href="resources/css/nav.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="resources/css/footer.css" type="text/css" media="all" />
+
+        <script src="node_modules/vue/dist/vue.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="node_modules/vue-router/dist/vue-router.min.js" type="text/javascript" charset="utf-8"></script>
 
         <title>Visualizador Pacientes</title>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="bower_components/materialize/bin/materialize.min.js"></script> 
+
+        <header>
+            <nav>
+                <div class="nav-wrapper my-top-nav light-green lighten-1">
+                    <a href="#!" class="brand-logo">{ Logo }</a>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+
+            <ul id="slide-out" class="side-nav fixed">
+                <li class="logo">
+                    <img class="background" src="resources/images/logo/logo2.png">
+                </li>
+                <li><a href="#"><i class="material-icons">list</i>Visualizar Questionários</a></li>
+                <li><a href="#"><i class="material-icons">file_upload</i>Upload Questionários</a></li>
+                <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
+                <li><div class="divider"></div></li>
+                <li><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
+            </ul>
+        </header>
+
+        <main>
+        <div class="container">
+            <p></p>
+        </div>
+        </main>
+
+        <footer class="page-footer light-green lighten-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">UFTM</h5>
+                        <p class="grey-text text-lighten-4">Universidade Federal do Triângulo Mineiro</p>
+                        <p class="grey-text text-lighten-4">
+                        Av.Frei Paulino, 30 - Bairro Abadia <br />
+                        CEP: 38025-180 Uberaba/MG <br />
+                        Fone: (34) 3700-6000 <br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2016 Todos os direitos Reservados
+                </div>
+            </div>
+        </footer>
+
+        <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="node_modules/materialize-css/dist/js/materialize.min.js"type="text/javascript" charset="utf-8"></script>
+
+        <script src="resources/js/routes.js" type="text/javascript" charset="utf-8"></script>
+        <script src="resources/js/side-nav.js" type="text/javascript" charset="utf-8"></script>
+        <script src="resources/js/app.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
+

@@ -1,0 +1,30 @@
+{
+  "name": "visualizador",
+  "version": "1.0.0",
+  "description": "Visualizador de xml",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "visualizador",
+    "xml"
+  ],
+  "author": "Augusto Melo <augustomelo92@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "install": "^0.8.1",
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^0.97.7",
+    "npm": "^3.10.8",
+    "vue": "^2.0.1",
+    "vue-router": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.7.0",
+    "eslint-config-google": "^0.6.0",
+    "lite-server": "^2.2.2"
+  }
+}
