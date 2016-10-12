@@ -1,27 +1,22 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css"/>
-        <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"/>
+        <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css"/> <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"/>
 
         <link rel="shortcut icon" href="resources/images/icon/favicon.ico" type="image/x-icon"/>
 
         <link rel="stylesheet" href="resources/css/nav.css" type="text/css" media="all" />
         <link rel="stylesheet" href="resources/css/footer.css" type="text/css" media="all" />
 
-        <script src="node_modules/vue/dist/vue.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="node_modules/vue-router/dist/vue-router.min.js" type="text/javascript" charset="utf-8"></script>
-
         <title>Visualizador Pacientes</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-
         <header>
             <nav>
                 <div class="nav-wrapper my-top-nav light-green lighten-1">
-                    <a href="#!" class="brand-logo">{ Logo }</a>
+                    <a href="#!" class="brand-logo">Visualizador de Questinários</a>
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
@@ -39,9 +34,11 @@
         </header>
 
         <main>
-        <div class="container">
-            <p></p>
-        </div>
+            <div class="container" id="app">
+                <transition>
+                    <router-view> </router-view>
+                </transition>
+            </div>
         </main>
 
         <footer class="page-footer light-green lighten-1">
@@ -67,10 +64,9 @@
 
         <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="node_modules/materialize-css/dist/js/materialize.min.js"type="text/javascript" charset="utf-8"></script>
-
-        <script src="resources/js/routes.js" type="text/javascript" charset="utf-8"></script>
         <script src="resources/js/side-nav.js" type="text/javascript" charset="utf-8"></script>
-        <script src="resources/js/app.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="dist/bundle.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
 
