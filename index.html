@@ -3,68 +3,17 @@
     <head>
         <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css"/> <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"/>
 
-        <link rel="shortcut icon" href="resources/images/icon/favicon.ico" type="image/x-icon"/>
-
-        <link rel="stylesheet" href="resources/css/nav.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="resources/css/footer.css" type="text/css" media="all" />
+        <link rel="shortcut icon" href="src/assets/images/icon/favicon.ico" type="image/x-icon"/>
 
         <title>Visualizador Pacientes</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="nav-wrapper my-top-nav light-green lighten-1">
-                    <a href="#!" class="brand-logo">Visualizador de Questinários</a>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                </div>
-            </nav>
-
-            <ul id="slide-out" class="side-nav fixed">
-                <li class="logo">
-                    <img class="background" src="resources/images/logo/logo2.png">
-                </li>
-                <li><a href="#"><i class="material-icons">list</i>Visualizar Questionários</a></li>
-                <li><a href="#"><i class="material-icons">file_upload</i>Upload Questionários</a></li>
-                <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
-                <li><div class="divider"></div></li>
-                <li><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
-            </ul>
-        </header>
-
-        <main>
-            <div class="container" id="app">
-                <transition>
-                    <router-view> </router-view>
-                </transition>
-            </div>
-        </main>
-
-        <footer class="page-footer light-green lighten-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">UFTM</h5>
-                        <p class="grey-text text-lighten-4">Universidade Federal do Triângulo Mineiro</p>
-                        <p class="grey-text text-lighten-4">
-                        Av.Frei Paulino, 30 - Bairro Abadia <br />
-                        CEP: 38025-180 Uberaba/MG <br />
-                        Fone: (34) 3700-6000 <br />
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2016 Todos os direitos Reservados
-                </div>
-            </div>
-        </footer>
+        <div id="app"> </div>
 
         <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="node_modules/materialize-css/dist/js/materialize.min.js"type="text/javascript" charset="utf-8"></script>
-        <script src="resources/js/side-nav.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="dist/bundle.js" type="text/javascript" charset="utf-8"></script>
     </body>

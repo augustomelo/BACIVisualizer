@@ -26,10 +26,5 @@ module.exports = {
     babel: {
         presets: ["es2015", "stage-0"],
         plugins: ["transform-runtime"]
-    },
-    resolve: {
-        alias: {
-            vue$: 'vue/dist/vue.js'
-        }
     }
 };
