@@ -3,7 +3,7 @@
         <header>
             <nav>
                 <div class="nav-wrapper my-top-nav light-green lighten-1">
-                    <a href="#!" class="brand-logo">Visualizador de Questinários</a>
+                    <a href="#!" class="brand-logo app-title">Visualizador de Questinários</a>
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
@@ -22,7 +22,15 @@
 
         <main>
             <transition name="fade" mode="out-in">
-                <router-view> </router-view>
+                <div class="row main-card">
+                    <div class="col s12 m12">
+                        <div class="card light-green lighten-5">
+                            <div class="card-content black-text">
+                                <router-view> </router-view>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </transition>
         </main>
 
@@ -49,8 +57,6 @@
     </div>
 </template>
 
-
-
 <style lang="sass" scoped>
 .app {
     display: flex;
@@ -62,8 +68,7 @@ main {
     flex: 1 0 auto;
 }
 
-.my-top-nav
-{
+.my-top-nav {
     height: 152px;
     padding-top: 1%;
     padding-left: 5%;
@@ -79,4 +84,11 @@ header, main, footer {
     }
 }
 
+.app-title {
+    margin-top: 1%;
+}
+
+.main-card {
+    margin-top: 2%;
+}
 </style>
