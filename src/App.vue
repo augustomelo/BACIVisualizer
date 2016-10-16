@@ -3,7 +3,7 @@
         <header>
             <nav>
                 <div class="nav-wrapper my-top-nav light-green lighten-1">
-                    <a href="#!" class="brand-logo app-title">Visualizador de Questinários</a>
+                    <router-link to="/" class="brand-logo app-title" exact>Visualizador de Questinários</router-link>
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
@@ -13,7 +13,7 @@
                     <img class="background" src="src/assets/images/logo/logo2.png">
                 </li>
                 <li><a href="#"><i class="material-icons">list</i>Visualizar Questionários</a></li>
-                <li><a href="#"><i class="material-icons">file_upload</i>Upload Questionários</a></li>
+                <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
                 <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
                 <li><div class="divider"></div></li>
                 <li><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
