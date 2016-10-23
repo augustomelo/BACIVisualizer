@@ -10,7 +10,9 @@
 
             <ul id="slide-out" class="side-nav fixed">
                 <li class="logo">
-                    <img class="background" src="src/assets/images/logo/logo2.png">
+                    <router-link to="/" class="my-logo">
+                        <img class="background" src="src/assets/images/logo/logo2.png">
+                    </router-link>
                 </li>
                 <li><a href="#"><i class="material-icons">list</i>Visualizar Questionários</a></li>
                 <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
@@ -82,12 +84,6 @@ main
 .my-card
     padding: 2%
 
-header, main, footer
-    padding-left: 300px
-
-@media only screen and (max-width : 992px)
-    header, main, footer 
-        padding-left: 0
 
 .app-title
     margin-top: 1%
@@ -100,4 +96,14 @@ header, main, footer
 
 .fade-enter, .fade-leave-active 
   opacity: 0
+
+.my-logo
+    min-height: 200px
+
+header, main, footer
+    padding-left: 300px
+
+@media only screen and (max-width : 992px)
+    header, main, footer 
+        padding-left: 0
 </style>
