@@ -21,6 +21,9 @@
                                 <span v-if="isAdvancedUpload"> ou <b>arraste</b> </span>
                                 para iniciar o upload.
                             </h5>
+                            <h6>
+                                Somente arquivos xml são permitidos.
+                            </h6>
                         </label>
                         <h6 v-if="loadedFile > 0">
                             Foi feito o upload de {{ this.totalFile }} questionário(s).
@@ -76,7 +79,6 @@
             upload: function(event) {
                 event.preventDefault();
                 event.stopPropagation();
-                this.startedUpload = true;
                 this.isOver = false;
 
                 var files = event.dataTransfer.files;
@@ -87,10 +89,15 @@
                 this.totalFile = files.length;
                 this.loadedFile = 0;
 
+                if (files.length > 0)
+                    this.startedUpload = true;
+
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
-                    if (!file.type.match('xml.*'))
+                    if (!file.type.match('xml.*')) {
+                        Materialize.toast(file.name + ' não é um arquivo XML!', 5000);
                         continue;
+                    }
 
                     reader.readAsText(file);
                 }
