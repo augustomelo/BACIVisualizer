@@ -33,7 +33,6 @@
 </template>
 
 <style lang="sass" scoped>
-.child-list {
-    padding-left: 5%;
-}
+.child-list
+    padding-left: 5%
 </style>

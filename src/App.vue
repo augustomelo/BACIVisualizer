@@ -21,17 +21,17 @@
         </header>
 
         <main>
-            <transition name="fade" mode="out-in">
-                <div class="row main-card">
-                    <div class="col s12 m12">
-                        <div class="card light-green lighten-5">
-                            <div class="card-content black-text">
+            <div class="row main-card">
+                <div class="col s12 m12">
+                    <div class="card my-card light-green lighten-5">
+                        <div class="card-content black-text">
+                            <transition name="fade" mode="out-in" appear>
                                 <router-view> </router-view>
-                            </div>
+                            </transition>
                         </div>
                     </div>
                 </div>
-            </transition>
+            </div>
         </main>
 
         <footer class="page-footer light-green lighten-1">
@@ -57,38 +57,47 @@
     </div>
 </template>
 
+<script>
+    export default {
+        mounted() {
+            $(".button-collapse").sideNav();
+        }
+    };
+</script>
+
 <style lang="sass" scoped>
-.app {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
+.app
+    display: flex
+    min-height: 100vh
+    flex-direction: column
 
-main {
-    flex: 1 0 auto;
-}
+main
+    flex: 1 0 auto
 
-.my-top-nav {
-    height: 152px;
-    padding-top: 1%;
-    padding-left: 5%;
-}
+.my-top-nav
+    height: 152px
+    padding-top: 1%
+    padding-left: 5%
 
-header, main, footer {
-    padding-left: 300px;
-}
+.my-card
+    padding: 2%
 
-@media only screen and (max-width : 992px) {
-    header, main, footer {
-        padding-left: 0;
-    }
-}
+header, main, footer
+    padding-left: 300px
 
-.app-title {
-    margin-top: 1%;
-}
+@media only screen and (max-width : 992px)
+    header, main, footer 
+        padding-left: 0
 
-.main-card {
-    margin-top: 2%;
-}
+.app-title
+    margin-top: 1%
+
+.main-card
+    margin-top: 2%
+
+.fade-enter-active, .fade-leave-active
+  transition: all .2s ease
+
+.fade-enter, .fade-leave-active 
+  opacity: 0
 </style>

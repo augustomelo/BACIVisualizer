@@ -7,7 +7,6 @@ import Upload from '../components/Upload.vue';
 Vue.use(VueRouter);
 
 export default new VueRouter({
-    mode: 'history',
     routes: [
         { path: '/', component: Home },
         { path: '/upload', component: Upload }

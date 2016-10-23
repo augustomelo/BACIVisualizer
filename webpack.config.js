@@ -20,7 +20,8 @@ module.exports = {
     },
     vue: {
         loaders: {
-            js: 'babel'
+            js: 'babel',
+            sass: 'vue-style-loader!css-loader!sass?indentedSyntax'
         }
     },
     babel: {
