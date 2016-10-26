@@ -14,7 +14,7 @@
                         <img class="background" src="src/assets/images/logo/logo2.png">
                     </router-link>
                 </li>
-                <li><a href="#"><i class="material-icons">list</i>Visualizar Questionários</a></li>
+                <li><router-link to="/list"><i class="material-icons">list</i>Visualizar Questionários</router-link></li>
                 <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
                 <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
                 <li><div class="divider"></div></li>
