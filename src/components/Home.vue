@@ -28,7 +28,7 @@
 
             <li>Você poderá limpar os questionários e começar novamente, para isso basta clicar em "Deletar Questionários"</li>
         </ol>
-        <p>Caso você queira ver o questionário clique AQUI, ou em ajuda no menu ao lado.</p>
+        <p>Caso você queira ver o questionário clique <router-link to="/questionnaire">AQUI</router-link>, ou em ajuda no menu ao lado.</p>
     </div>
 </template>
 
