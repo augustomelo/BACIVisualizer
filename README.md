@@ -36,8 +36,7 @@ webpackconfig.json  // webpack configuration
 .eslintrc           // eslint configuration
 ```
 
-
-## Screen Oraganization
+## Screen Organization
 Were followed the order of the document sent
 | System Screen | Document Screen |
 |---------------|-----------------|
