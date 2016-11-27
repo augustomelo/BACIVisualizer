@@ -7,7 +7,7 @@
 <script>
     export default {
         name: 'Screen008',
-        mounted() {
+        mounted: function() {
             $('.materialboxed').materialbox();
         }
     };

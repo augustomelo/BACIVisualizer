@@ -14,7 +14,7 @@
 <script>
     export default {
         name: 'Screen091',
-        mounted() {
+        mounted: function() {
             $('select').material_select();
         }
     };

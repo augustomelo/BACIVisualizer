@@ -98,7 +98,7 @@
 <script>
     export default {
         name: 'Screen002',
-        mounted() {
+        mounted: function() {
             $('select').material_select();
             $('.datepicker').pickadate({
                 format: 'dd-mm-yyyy'
