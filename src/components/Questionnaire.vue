@@ -125,18 +125,15 @@
 
         <div class="row">
             <div class="col s12 right-align">
-                <ul class="pagination">
-                    <li @click="goPreviousScreen" class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a>1</a></li>
-                    <li class="waves-effect"><a>2</a></li> <li class="waves-effect"><a>...</a></li>
-                    <li @click="goNextScreen" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+                <my-pagination :totalPages="114" :chunkSize="10" :callback="update"></my-pagination>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import myPagination from './Pagination.vue';
+
     import Screen001 from './screens/Screen001.vue';
     import Screen002 from './screens/Screen002.vue';
     import Screen003 from './screens/Screen003.vue';
@@ -253,7 +250,10 @@
     import Screen114 from './screens/Screen114.vue';
 
     export default {
+        name: 'my-questionnaire',
         components: {
+            myPagination,
+
             Screen001,
             Screen002,
             Screen003,
@@ -367,27 +367,18 @@
             Screen111,
             Screen112,
             Screen113,
-            Screen114
+            Screen114,
         },
-        data() {
+        data: function() {
             return {
-                screen: 48,
-                MAXNUMBERSCREEN: 109
+                screen: 1,
             };
         },
         methods: {
-            goNextScreen: function() {
-                if (this.screen < this.MAXNUMBERSCREEN)
-                    this.screen++;
+            update: function(page) {
+                this.screen = page;
             },
-            goPreviousScreen: function() {
-                if (this.screen > 1)
-                    this.screen--;
-            },
-            goScren: function(screen) {
-                this.screen = screen;
-            }
-        }
+        },
     };
 </script>
 

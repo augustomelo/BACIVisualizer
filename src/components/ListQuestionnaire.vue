@@ -58,34 +58,32 @@
         <div class="row">
             <div class="col s7 left-align my-label-info">
                 <h6>
-                    Mostrando 1 of 10 of 19 entradas
+                    Mostrando 1 de 10 de 19 entradas
                 </h6>
             </div>
             <div class="col s5 right-align">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!">4</a></li>
-                    <li class="waves-effect"><a href="#!">5</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+                <my-pagination :totalPages="5" :callback="update"></my-pagination>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import myPagination from './Pagination.vue';
     export default {
-        mounted() {
+        components: {
+            myPagination,
+        },
+        mounted: function() {
             $('select').material_select();
         },
         methods: {
             showFullData: function(number) {
                 console.log(number);
-            }
-        }
+            },
+            update: function(page) {
+            },
+        },
     };
 </script>
 
