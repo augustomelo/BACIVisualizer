@@ -1,19 +1,19 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Home from '../components/Home.vue';
-import Upload from '../components/Upload.vue';
-import ListQuestionnaire from '../components/ListQuestionnaire.vue';
-import Questionnaire from '../components/Questionnaire.vue';
+import HomeView from '../views/HomeView.vue';
+import UploadView from '../views/UploadView.vue';
+import ListQuestionnaireView from '../views/ListQuestionnaireView.vue';
+import QuestionnaireView from '../views/QuestionnaireView.vue';
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
-        { path: '/', component: Home },
-        { path: '/upload', component: Upload },
-        { path: '/list', component: ListQuestionnaire },
-        { path: '/questionnaire', component: Questionnaire }
-    ]
+        { path: '/', component: HomeView },
+        { path: '/upload', component: UploadView },
+        { path: '/list', component: ListQuestionnaireView },
+        { path: '/questionnaireView', component: QuestionnaireView },
+    ],
 });
 

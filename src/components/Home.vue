@@ -32,6 +32,12 @@
     </div>
 </template>
 
+<script>
+    export default {
+        name: 'my-home',
+    };
+</script>
+
 <style lang="sass" scoped>
 .child-list
     padding-left: 5%

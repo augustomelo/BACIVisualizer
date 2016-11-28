@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        name: 'my-pagination',
+        name: 'myPagination',
         props: {
             startPage: {
                 type: Number,

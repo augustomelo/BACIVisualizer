@@ -47,6 +47,7 @@
 
 <script>
     export default {
+        name: 'myUpload',
         data() {
             return {
                 isOver: false,
