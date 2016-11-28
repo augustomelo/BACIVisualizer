@@ -250,7 +250,7 @@
     import Screen114 from './screens/Screen114.vue';
 
     export default {
-        name: 'my-questionnaire',
+        name: 'myQuestionnaire',
         components: {
             myPagination,
 
