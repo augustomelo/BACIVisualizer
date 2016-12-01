@@ -13,7 +13,7 @@ export default new VueRouter({
         { path: '/', component: HomeView },
         { path: '/upload', component: UploadView },
         { path: '/list', component: ListQuestionnaireView },
-        { path: '/questionnaireView', component: QuestionnaireView },
+        { path: '/questionnaire', component: QuestionnaireView },
     ],
 });
 
