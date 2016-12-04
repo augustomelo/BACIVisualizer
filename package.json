@@ -22,7 +22,8 @@
     "materialize-css": "^0.97.8",
     "npm": "^3.10.10",
     "vue": "^2.0.5",
-    "vue-router": "^2.0.1"
+    "vue-router": "^2.0.1",
+    "vuex": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
