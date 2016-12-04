@@ -62,7 +62,7 @@
                 </h6>
             </div>
             <div class="col s5 right-align">
-                <my-pagination :totalPages="5" :callback="update"></my-pagination>
+                <my-pagination :totalPages="5" :callback="update"/>
             </div>
         </div>
     </div>
