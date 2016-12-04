@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import myListQuestionnaire from '../components/ListQuestionnaire.vue';
+    import myListQuestionnaire from '../components/ListQuestionnaire';
 
     export default {
         name: 'ListQuestionnaireView',

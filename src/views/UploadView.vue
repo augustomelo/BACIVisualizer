@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import myUpload from '../components/Upload.vue';
+    import myUpload from '../components/Upload';
 
     export default {
         name: 'UploadView',

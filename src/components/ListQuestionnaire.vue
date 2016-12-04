@@ -69,7 +69,7 @@
 </template>
 
 <script>
-    import myPagination from './Pagination.vue';
+    import myPagination from './Pagination';
     export default {
         name: 'myListQuestionnaire',
         components: {

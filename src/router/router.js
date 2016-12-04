@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import HomeView from '../views/HomeView.vue';
-import UploadView from '../views/UploadView.vue';
-import ListQuestionnaireView from '../views/ListQuestionnaireView.vue';
-import QuestionnaireView from '../views/QuestionnaireView.vue';
+import HomeView from '../views/HomeView';
+import UploadView from '../views/UploadView';
+import ListQuestionnaireView from '../views/ListQuestionnaireView';
+import QuestionnaireView from '../views/QuestionnaireView';
 
 Vue.use(VueRouter);
 
