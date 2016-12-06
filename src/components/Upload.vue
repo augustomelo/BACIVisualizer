@@ -46,18 +46,24 @@
 </template>
 
 <script>
+    import X2JS from '../../node_modules/x2js/x2js';
+
     export default {
         name: 'myUpload',
         data() {
             return {
                 isOver: false,
                 startedUpload: false,
-                loadProgress: "0%",
+                loadProgress: '0%',
                 totalFile: 0,
-                loadedFile: 0
+                loadedFile: 0,
+                x2js: new X2JS(),
             };
         },
         methods: {
+            add: function(patient) {
+                this.$store.dispatch('add', patient);
+            },
             isAdvancedUpload: function() {
                 if (window.File && window.FileReader &&
                     window.FileList && window.Blob) {
@@ -82,8 +88,8 @@
                 event.stopPropagation();
                 this.isOver = false;
 
-                var files = event.dataTransfer.files;
-                var reader = new FileReader();
+                let files = event.dataTransfer.files;
+                let reader = new FileReader();
                 reader.onerror = this.errorHandler;
                 reader.onload = this.loadFile;
 
@@ -93,8 +99,8 @@
                 if (files.length > 0)
                     this.startedUpload = true;
 
-                for (var i = 0; i < files.length; i++) {
-                    var file = files[i];
+                for (let i = 0; i < files.length; i++) {
+                    let file = files[i];
                     if (!file.type.match('xml.*')) {
                         Materialize.toast(file.name + ' não é um arquivo XML!', 5000);
                         continue;
@@ -104,31 +110,28 @@
                 }
 
                 // Delay the transition.
-                var self = this;
+                let self = this;
                 setTimeout(function() {
                     self.startedUpload = false;
                 }, 1000);
             },
             loadFile: function(event) {
-                // TODO Process the file and the load is finished.
-                // var contents = e.target.result;
-                // var library = x2js.xml_str2json(contents);
-                // library.library.book.forEach(function (element){
-                //     var book = new Object();
-                //     book.book = new Object();
-                //     for (var attr in element) {
-                //         book.book[attr] = element[attr];
-                //     }
-                //     jsonObj.push(book);
-                // });
+                // Process the file.
+                let contents = event.target.result;
+                let patients = this.x2js.xml2js(contents);
+                let self = this;
 
-                var prct = Math.round(++this.loadedFile / this.totalFile) * 100;
-                this.loadProgress = prct + "%";
+                patients.Pacientes.Paciente.forEach(function(element) {
+                    self.add(element);
+                });
+
+                let prct = Math.round(++this.loadedFile / this.totalFile) * 100;
+                this.loadProgress = prct + '%';
             },
             errorHandler: function(evnt) {
-                // TODO Handle errors.
-            }
-        }
+                Materialize.toast('Algum erro inesperado ocorreu ao fazer o upload do arquivo!');
+            },
+        },
     };
 </script>
 
