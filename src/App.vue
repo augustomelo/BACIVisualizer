@@ -63,7 +63,7 @@
 <script>
     export default {
         name: 'App',
-        mounted() {
+        mounted: function() {
             $('.button-collapse').sideNav();
         },
     };

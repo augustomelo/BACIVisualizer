@@ -5,52 +5,31 @@
         <br />
         <div class="row my-row">
             <div class="input-field col s3">
-                <select id="entries" class="vai">
-                    <option value="1">10</option>
-                    <option selected value="2">50</option>
-                    <option value="3">100</option>
-                </select>
-                <label for="entries">Escolha quantas entradas</label>
+                <my-select :options="options" 
+                    title="Escolha quantas entradas" 
+                    :startValue="elementsPerPage" 
+                    :callback="updateElementsPerPage"/>
             </div>
             <div class="input-field col s9">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Pesquisar</label>
+                <my-search :data="allData" 
+                    :properties="['Nome', 'Tela2.nomeAvaliado', 'Tela2.dataAplicacao']" 
+                    :callback="updateTable"/>
             </div>
         </div>
         <table class="striped">
             <thead>
                 <tr>
-                    <th data-field="responsibleName">Responsável</th>
-                    <th data-field="patienteName">Paciente</th>
-                    <th data-field="dateQuestioanry">Data de Aplicação</th>
+                    <th>Responsável</th>
+                    <th>Paciente</th>
+                    <th>Data de Aplicação</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr @dblclick="showFullData(1)">
-                    <td>Eu</td>
-                    <td>Eu</td>
-                    <td>Eu</td>
-                </tr>
-                <tr @dblclick="showFullData(2)">
-                    <td>Vc</td>
-                    <td>Vc</td>
-                    <td>Vc</td>
-                </tr>
-                <tr @dblclick="showFullData(3)">
-                    <td>Ele</td>
-                    <td>Ele</td>
-                    <td>Ele</td>
-                </tr>
-                <tr @dblclick="showFullData(4)">
-                    <td>Tu</td>
-                    <td>Tu</td>
-                    <td>Tu</td>
-                <tr @dblclick="showFullData(5)">
-                    <td>Eu</td>
-                    <td>Eu</td>
-                    <td>Eu</td>
-                </tr>
+                <tr v-for="(patient, index) in displayData" v-on:dblclick="showFullData(index)">
+                    <td>{{ patient.Nome }}</td>
+                    <td>{{ patient.Tela2.nomeAvaliado }}</td>
+                    <td>{{ patient.Tela2.dataAplicacao }}</td>
                 </tr>
             </tbody>
         </table>
@@ -58,11 +37,13 @@
         <div class="row">
             <div class="col s7 left-align my-label-info">
                 <h6>
-                    Mostrando 1 de 10 de 19 entradas
+                    Mostrando {{ (elementsPerPage * (currPage - 1)) + 1 }} de 
+                    {{ elementsPerPage * currPage }} de
+                    {{ displayData.length }} entradas
                 </h6>
             </div>
             <div class="col s5 right-align">
-                <my-pagination :totalPages="5" :callback="update"/>
+                <my-pagination :totalPages="totalPages" :callback="updatePage"/>
             </div>
         </div>
     </div>
@@ -70,20 +51,69 @@
 
 <script>
     import myPagination from './Pagination';
+    import mySearch from './Search';
+    import mySelect from './Select';
+
     export default {
         name: 'myListQuestionnaire',
         components: {
             myPagination,
-        },
-        mounted: function() {
-            $('select').material_select();
+            mySearch,
+            mySelect,
         },
         methods: {
-            showFullData: function(number) {
-                console.log(number);
+            showFullData: function(id) {
+                this.$router.push({ name: 'questionnaire', params: { userId: id } });
             },
-            update: function(page) {
+            updatePage: function(page) {
+                this.currPage = page;
             },
+            updateTable: function(data) {
+                this.currPage = 1;
+                this.allData = data;
+            },
+            updateElementsPerPage: function(value) {
+                this.elementsPerPage = value;
+            },
+        },
+        computed: {
+            allData: {
+                get: function() {
+                    if (this.rows === undefined)
+                        return this.$store.getters.getAllPatients;
+
+                    return this.rows;
+                },
+                set: function(newValue) {
+                    this.rows = newValue;
+                },
+            },
+            displayData: function() {
+                let initialElement = (this.currPage - 1) * this.elementsPerPage;
+                let lastElement = this.currPage * this.elementsPerPage;
+
+                return this.allData.slice(initialElement, lastElement);
+            },
+            totalPages: function() {
+                let totalPages = Math.round(this.allData.length/this.elementsPerPage);
+
+                if (totalPages == 0)
+                    return 1;
+
+                return totalPages;
+            },
+        },
+        data: function() {
+            return {
+                rows: undefined,
+                currPage: 1,
+                elementsPerPage: '50',
+                options: [
+                    { text: '10', value: 10 },
+                    { text: '50', value: 50 },
+                    { text: '100', value: 100 },
+                ],
+            };
         },
     };
 </script>

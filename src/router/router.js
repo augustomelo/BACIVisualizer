@@ -10,10 +10,30 @@ Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
-        { path: '/', component: HomeView },
-        { path: '/upload', component: UploadView },
-        { path: '/list', component: ListQuestionnaireView },
-        { path: '/questionnaire', component: QuestionnaireView },
+        {
+            path: '/',
+            name: 'home',
+            component: HomeView,
+        },
+        {
+            path: '/upload',
+            name: 'upload',
+            component: UploadView,
+        },
+        {
+            path: '/list',
+            name: 'listQuestionnaire',
+            component: ListQuestionnaireView,
+        },
+        {
+            path: '/questionnaire/:userId',
+            name: 'questionnaire',
+            component: QuestionnaireView,
+        },
+        {
+            path: '*',
+            redirect: { name: 'home' },
+        },
     ],
 });
 

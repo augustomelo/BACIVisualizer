@@ -4,7 +4,7 @@
             <ul class="pagination">
                 <li @click="go(1)" class="waves-effect"><a><i class="material-icons">first_page</i></a></li>
                 <li @click="previous" class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-                <li v-for="page in pagesDisplayed" class="waves-effect" :class="{ active: page == currPage}">
+                <li v-for="page in pagesDisplayed" class="waves-effect" :class="{ active: page == currPage }">
                     <a @click="go(page)" > {{ page }} </a>
                 <li>
                 </li>
