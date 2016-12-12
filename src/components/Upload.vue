@@ -64,6 +64,9 @@
             add: function(patient) {
                 this.$store.dispatch('add', patient);
             },
+            persistAll: function() {
+                this.$store.dispatch('persistAll');
+            },
             isAdvancedUpload: function() {
                 if (window.File && window.FileReader &&
                     window.FileList && window.Blob) {
@@ -113,6 +116,7 @@
                 let self = this;
                 setTimeout(function() {
                     self.startedUpload = false;
+                    self.persistAll();
                 }, 1000);
             },
             loadFile: function(event) {

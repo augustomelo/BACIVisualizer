@@ -19,7 +19,7 @@
                 <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
                 <li><router-link to="/questionnaire"><i class="material-icons">help</i>Ajuda</router-link></li>
                 <li><div class="divider"></div></li>
-                <li><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
+                <li @click="removeAll"><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
             </ul>
         </header>
 
@@ -63,8 +63,17 @@
 <script>
     export default {
         name: 'App',
+        methods: {
+            loadPatients: function() {
+                this.$store.dispatch('loadPatients');
+            },
+            removeAll: function() {
+                this.$store.dispatch('removeAll');
+            },
+        },
         mounted: function() {
             $('.button-collapse').sideNav();
+            this.loadPatients();
         },
     };
 </script>
