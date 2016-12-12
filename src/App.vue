@@ -3,21 +3,21 @@
         <header>
             <nav>
                 <div class="nav-wrapper my-top-nav light-green lighten-1">
-                    <router-link to="/" class="brand-logo app-title" exact>Visualizador de Questinários BACI</router-link>
+                    <router-link to="/home" class="brand-logo app-title" active-class="active-title" exact>Visualizador de Questinários BACI</router-link>
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
 
             <ul id="slide-out" class="side-nav fixed">
                 <li class="logo">
-                    <router-link to="/" class="my-logo">
+                    <router-link to="/home" class="my-logo" active-class="active-figure">
                         <img class="background" src="src/assets/images/logo/logo2.png">
                     </router-link>
                 </li>
                 <li><router-link to="/list"><i class="material-icons">list</i>Visualizar Questionários</router-link></li>
                 <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
                 <li @click="downloadData"><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
-                <li><router-link to="/questionnaire"><i class="material-icons">help</i>Ajuda</router-link></li>
+                <li><router-link to="/help"><i class="material-icons">help</i>Ajuda</router-link></li>
                 <li><div class="divider"></div></li>
                 <li @click="removeAll"><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
             </ul>
@@ -117,6 +117,9 @@
 </script>
 
 <style lang="sass" scoped>
+.router-link-active
+    background-color: rgba(0,0,0,0.05);
+
 .app
     display: flex
     min-height: 100vh

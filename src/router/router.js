@@ -31,6 +31,10 @@ export default new VueRouter({
             component: QuestionnaireView,
         },
         {
+            path: '/help',
+            redirect: { name: 'home' },
+        },
+        {
             path: '*',
             redirect: { name: 'home' },
         },
