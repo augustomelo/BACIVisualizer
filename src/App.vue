@@ -16,7 +16,7 @@
                 </li>
                 <li><router-link to="/list"><i class="material-icons">list</i>Visualizar Questionários</router-link></li>
                 <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
-                <li><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
+                <li @click="downloadData"><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
                 <li><router-link to="/questionnaire"><i class="material-icons">help</i>Ajuda</router-link></li>
                 <li><div class="divider"></div></li>
                 <li @click="removeAll"><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
@@ -61,14 +61,52 @@
 </template>
 
 <script>
+    import X2JS from '../node_modules/x2js/x2js';
+
     export default {
         name: 'App',
+        computed: {
+            patients: {
+                get: function() {
+                    return this.$store.getters.getAllPatients;
+                },
+            },
+        },
+        data: function() {
+            return {
+                x2js: new X2JS(),
+            };
+        },
         methods: {
             loadPatients: function() {
                 this.$store.dispatch('loadPatients');
             },
             removeAll: function() {
                 this.$store.dispatch('removeAll');
+            },
+            downloadData: function() {
+                let xmlObj = '<Patients>';
+                let data = this.patients;
+                let self = this;
+
+                data.forEach(function(element) {
+                    xmlObj += self.x2js.js2xml(element);
+                });
+
+                xmlObj += '</Patients>';
+
+                let blob = new Blob([xmlObj], { type: 'text/xml;charset=utf-8;' });
+                let link = document.createElement('a');
+                link.setAttribute('download', 'pacientes.xml');
+                link.href = window.URL.createObjectURL(blob);
+                document.body.appendChild(link);
+
+                // wait for the link to be added to the document
+                window.requestAnimationFrame(function() {
+                    let event = new MouseEvent('click');
+                    link.dispatchEvent(event);
+                    document.body.removeChild(link);
+                });
             },
         },
         mounted: function() {

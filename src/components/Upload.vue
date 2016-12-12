@@ -50,7 +50,7 @@
 
     export default {
         name: 'myUpload',
-        data() {
+        data: function() {
             return {
                 isOver: false,
                 startedUpload: false,

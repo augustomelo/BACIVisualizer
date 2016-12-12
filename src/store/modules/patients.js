@@ -44,9 +44,12 @@ const mutations = {
     },
     [types.LOAD_PATIENTS](state) {
         if (window.localStorage) {
-            state.patients = JSON.parse(
+            let patients = JSON.parse(
                 window.localStorage.getItem('patients')
             );
+
+            if (patients != null)
+                state.patients = patients;
         }
     },
 };
