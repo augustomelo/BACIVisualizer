@@ -16,23 +16,34 @@
                     :callback="updateTable"/>
             </div>
         </div>
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th>Responsável</th>
-                    <th>Paciente</th>
-                    <th>Data de Aplicação</th>
-                </tr>
-            </thead>
+        <transition name="message" mode="out-in">
+            <table v-if="displayData.length > 0"  class="striped">
+                <thead>
+                    <tr>
+                        <th>Responsável</th>
+                        <th>Paciente</th>
+                        <th>Data de Aplicação</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr v-for="(patient, index) in displayData" v-on:dblclick="showFullData(index)">
-                    <td>{{ patient.Nome }}</td>
-                    <td>{{ patient.Tela2.nomeAvaliado }}</td>
-                    <td>{{ patient.Tela2.dataAplicacao }}</td>
-                </tr>
-            </tbody>
-        </table>
+                <tbody>
+                    <tr v-for="(patient, index) in displayData" v-on:dblclick="showFullData(index)">
+                        <td>{{ patient.Nome }}</td>
+                        <td>{{ patient.Tela2.nomeAvaliado }}</td>
+                        <td>{{ patient.Tela2.dataAplicacao }}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div v-else class="empty-search light-green lighten-4 z-depth-1 valign-wrapper">
+                <div class="empty-search-message valign">
+                    <h6>
+                        Nenhum registro foi encontrado para o critério de busca utilizado.
+                    </h6>
+                </div>
+            </div>
+        </transition>
 
         <div class="row">
             <div class="col s7 left-align my-label-info">
@@ -148,4 +159,22 @@ table.striped>tbody>tr:nth-child(odd)
 
 .my-label-info
     padding-top: 15px
+
+.empty-search
+    min-height: 100px
+    min-width: 100%
+    margin-top: 2%
+    margin-bottom: 2%
+    text-align: center
+    color: #bbb
+
+.empty-search-message
+    min-width: 100%
+
+.message-enter-active, .message-leave-active
+  transition: opacity .2s
+
+.message-enter, .message-leave-active
+  opacity: 0
+
 </style>
