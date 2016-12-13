@@ -16,10 +16,10 @@
                 </li>
                 <li><router-link to="/list"><i class="material-icons">list</i>Visualizar Questionários</router-link></li>
                 <li><router-link to="/upload"><i class="material-icons">file_upload</i>Upload Questionários</router-link></li>
-                <li @click="downloadData"><a href="#"><i class="material-icons">file_download</i>Download Questionários</a></li>
+                <li @click="openDownloadModal" class="pointer-cursor"><a><i class="material-icons">file_download</i>Download Questionários</a></li>
                 <li><router-link to="/help"><i class="material-icons">help</i>Ajuda</router-link></li>
                 <li><div class="divider"></div></li>
-                <li @click="removeAll"><a href="#"><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
+                <li @click="openRemoveAllModal" class="pointer-cursor"><a><i class="material-icons">delete_forever</i>Deletar Questionários</a></li>
             </ul>
         </header>
 
@@ -57,14 +57,30 @@
                 </div>
             </div>
         </footer>
+
+        <my-confirmation-modal
+            identificator="modalRemove"
+            title="Notificação de deleção"
+            body="Você tem certeza que quer deletar PERMANETEMENTE as informação sobre os pacientes?"
+            :affirmativeCallBack="removeAll"/>
+
+        <my-confirmation-modal
+            identificator="modalDownload"
+            title="Notificação de download"
+            body="Você tem certeza que quer fazer o download de toda a informação sobre os pacientes?"
+            :affirmativeCallBack="downloadData"/>
     </div>
 </template>
 
 <script>
     import X2JS from '../node_modules/x2js/x2js';
+    import myConfirmationModal from './components/ModalConfirmation';
 
     export default {
         name: 'App',
+        components: {
+            myConfirmationModal,
+        },
         computed: {
             patients: {
                 get: function() {
@@ -81,8 +97,14 @@
             loadPatients: function() {
                 this.$store.dispatch('loadPatients');
             },
+            openRemoveAllModal: function() {
+                $('#modalRemove').modal('open');
+            },
             removeAll: function() {
                 this.$store.dispatch('removeAll');
+            },
+            openDownloadModal: function() {
+                $('#modalDownload').modal('open');
             },
             downloadData: function() {
                 let xmlObj = '<Patients>';
@@ -152,10 +174,14 @@ main
 .my-logo
     min-height: 200px
 
+.pointer-cursor
+    cursor: pointer
+
 header, main, footer
     padding-left: 300px
 
 @media only screen and (max-width : 992px)
     header, main, footer
         padding-left: 0
+
 </style>
