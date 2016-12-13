@@ -31,6 +31,10 @@
                 type: Function,
             },
         },
+        data: function() {
+            return {
+            };
+        },
         methods: {
             positiveDispose: function() {
                 $('#' + this.identificator).modal('close');
@@ -44,10 +48,6 @@
                 if (this.negativeCallBack !== undefined)
                     this.negativeCallBack();
             },
-        },
-        data: function() {
-            return {
-            };
         },
         mounted: function() {
             $('.modal').modal();

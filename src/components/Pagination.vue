@@ -41,6 +41,21 @@
                 required: true,
             },
         },
+        data: function() {
+            return {
+                paginationList: Array.from( Array(this.totalPages), (value, index) => index + 1),
+                currPage: this.startPage,
+                chunk: 0,
+            };
+        },
+        computed: {
+            pagesDisplayed: {
+                get: function() {
+                    const index = this.chunkSize * this.chunk;
+                    return this.paginationList.slice(index, index + this.chunkSize);
+                },
+            },
+        },
         methods: {
             next: function() {
                 if (this.currPage < this.totalPages) {
@@ -73,21 +88,6 @@
 
                 if (this.currPage < firsPageChunk || this.currPage > lastPageChunk)
                     this.chunk = Math.floor(page/this.chunkSize);
-            },
-        },
-        data: function() {
-            return {
-                paginationList: Array.from( Array(this.totalPages), (value, index) => index + 1),
-                currPage: this.startPage,
-                chunk: 0,
-            };
-        },
-        computed: {
-            pagesDisplayed: {
-                get: function() {
-                    const index = this.chunkSize * this.chunk;
-                    return this.paginationList.slice(index, index + this.chunkSize);
-                },
             },
         },
         mounted: function() {

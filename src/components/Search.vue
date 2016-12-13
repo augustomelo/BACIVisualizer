@@ -25,6 +25,22 @@
                 required: true,
             },
         },
+        data: function() {
+            return {
+                initialData: undefined,
+                query: '',
+            };
+        },
+        computed: {
+            allData: {
+                get: function() {
+                    if(this.initialData === undefined)
+                        this.initialData = this.data;
+
+                    return this.initialData;
+                },
+            },
+        },
         methods: {
             search: function() {
                 if (this.query === '')
@@ -50,22 +66,6 @@
                     this.callback(result);
                 }
             },
-        },
-        computed: {
-            allData: {
-                get: function() {
-                    if(this.initialData === undefined)
-                        this.initialData = this.data;
-
-                    return this.initialData;
-                },
-            },
-        },
-        data: function() {
-            return {
-                initialData: undefined,
-                query: '',
-            };
         },
     };
 </script>

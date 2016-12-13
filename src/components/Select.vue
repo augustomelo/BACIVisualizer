@@ -25,6 +25,10 @@
                 type: Function,
             },
         },
+        destroyed: function() {
+            let select = $(this.$el).children()[0];
+            $(select).material_select('destroy');
+        },
         mounted: function() {
             let vm = this;
             let select = $(this.$el).children()[0];
@@ -33,10 +37,6 @@
                 vm.callback(select.value);
             });
             $(select).material_select();
-        },
-        destroyed: function() {
-            let select = $(this.$el).children()[0];
-            $(select).material_select('destroy');
         },
     };
 </script>

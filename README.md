@@ -14,6 +14,11 @@ localhost:8080
 ## Code
 All the code must be written in English, and all the output to the user must be written in Portuguese.  
 The other convections must follow the eslint configuration, for the project were used the Google patter with some customizations.
+All script files on the export session should follow this pattern:
+- name
+- prop
+- data
+- and then the rest must follow the alphabetic order.
 
 ## Project Organization
 ```
@@ -30,6 +35,7 @@ src/                // source folder
 |- views/           // all the views used in the system
 |- App.vue/         // main component
 |- main.js/         // Vue and webpack entry point
+test/               // Test files
 index.html
 package.json        // dependencies modules
 webpackconfig.json  // webpack configuration

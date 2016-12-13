@@ -67,25 +67,22 @@
 
     export default {
         name: 'myListQuestionnaire',
+        data: function() {
+            return {
+                rows: undefined,
+                currPage: 1,
+                elementsPerPage: '50',
+                options: [
+                    { text: '10', value: 10 },
+                    { text: '50', value: 50 },
+                    { text: '100', value: 100 },
+                ],
+            };
+        },
         components: {
             myPagination,
             mySearch,
             mySelect,
-        },
-        methods: {
-            showFullData: function(id) {
-                this.$router.push({ name: 'questionnaire', params: { userId: id } });
-            },
-            updatePage: function(page) {
-                this.currPage = page;
-            },
-            updateTable: function(data) {
-                this.currPage = 1;
-                this.allData = data;
-            },
-            updateElementsPerPage: function(value) {
-                this.elementsPerPage = value;
-            },
         },
         computed: {
             allData: {
@@ -114,17 +111,20 @@
                 return totalPages;
             },
         },
-        data: function() {
-            return {
-                rows: undefined,
-                currPage: 1,
-                elementsPerPage: '50',
-                options: [
-                    { text: '10', value: 10 },
-                    { text: '50', value: 50 },
-                    { text: '100', value: 100 },
-                ],
-            };
+        methods: {
+            showFullData: function(id) {
+                this.$router.push({ name: 'questionnaire', params: { userId: id } });
+            },
+            updatePage: function(page) {
+                this.currPage = page;
+            },
+            updateTable: function(data) {
+                this.currPage = 1;
+                this.allData = data;
+            },
+            updateElementsPerPage: function(value) {
+                this.elementsPerPage = value;
+            },
         },
     };
 </script>

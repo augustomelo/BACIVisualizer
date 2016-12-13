@@ -251,6 +251,11 @@
 
     export default {
         name: 'myQuestionnaire',
+        data: function() {
+            return {
+                screen: 1,
+            };
+        },
         components: {
             myPagination,
 
@@ -368,11 +373,6 @@
             Screen112,
             Screen113,
             Screen114,
-        },
-        data: function() {
-            return {
-                screen: 1,
-            };
         },
         methods: {
             update: function(page) {
