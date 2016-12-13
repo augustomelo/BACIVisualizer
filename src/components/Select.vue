@@ -42,4 +42,14 @@
 </script>
 
 <style lang="sass">
+/* It is not scoped because of this one */
+.dropdown-content
+    background-color: #f1f8e9
+
+.dropdown-content>li>span
+    color: #000
+
+.dropdown-content li:houver
+    color: #000
+/*End*/
 </style>

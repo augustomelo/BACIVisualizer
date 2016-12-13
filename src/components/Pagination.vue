@@ -105,4 +105,6 @@
 </script>
 
 <style lang="sass" scoped>
+.pagination li.active
+    background: #9ccc65
 </style>

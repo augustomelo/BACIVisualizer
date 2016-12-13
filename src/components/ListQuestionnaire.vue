@@ -129,7 +129,7 @@
     };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .my-row
     margin-bottom: 0
 
@@ -142,20 +142,6 @@ table.striped>tbody>tr:nth-child(odd)
 .input-field input[type=text]:focus
     border-bottom: 1px solid #9ccc65
     box-shadow: 0 1px 0 0 #9ccc65
-
-/* It is not scoped because of this one */
-.dropdown-content
-    background-color: #f1f8e9
-
-.dropdown-content>li>span
-    color: #000
-
-.dropdown-content li:houver
-    color: #000
-/*End*/
-
-.pagination li.active
-    background: #9ccc65
 
 .my-label-info
     padding-top: 15px

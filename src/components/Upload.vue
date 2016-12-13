@@ -91,10 +91,12 @@
                 event.stopPropagation();
                 this.isOver = false;
 
-                let files = event.dataTransfer.files;
-                let reader = new FileReader();
-                reader.onerror = this.errorHandler;
-                reader.onload = this.loadFile;
+                let files = [];
+
+                if (event.dataTransfer !== undefined)
+                    files = event.dataTransfer.files;
+                else if (event.target !== undefined)
+                    files = event.target.files;
 
                 this.totalFile = files.length;
                 this.loadedFile = 0;
@@ -104,6 +106,11 @@
 
                 for (let i = 0; i < files.length; i++) {
                     let file = files[i];
+                    let reader = new FileReader();
+
+                    reader.onerror = this.errorHandler;
+                    reader.onload = this.loadFile;
+
                     if (!file.type.match('xml.*')) {
                         Materialize.toast(file.name + ' não é um arquivo XML!', 5000);
                         continue;
@@ -111,13 +118,6 @@
 
                     reader.readAsText(file);
                 }
-
-                // Delay the transition.
-                let self = this;
-                setTimeout(function() {
-                    self.startedUpload = false;
-                    self.persistAll();
-                }, 1000);
             },
             loadFile: function(event) {
                 // Process the file.
@@ -129,11 +129,25 @@
                     self.add(element);
                 });
 
-                let prct = Math.round(++this.loadedFile / this.totalFile) * 100;
+                let prct = Math.round((this.loadedFile + 1) / this.totalFile) * 100;
                 this.loadProgress = prct + '%';
+                this.onLoadEndHandler();
             },
             errorHandler: function(evnt) {
                 Materialize.toast('Algum erro inesperado ocorreu ao fazer o upload do arquivo!');
+                this.onLoadEndHandler();
+            },
+            onLoadEndHandler: function() {
+                this.loadedFile++;
+
+                if (this.loadedFile == this.totalFile) {
+                    // Delay the transition.
+                    let self = this;
+                    setTimeout(function() {
+                        self.startedUpload = false;
+                        self.persistAll();
+                    }, 1000);
+                }
             },
         },
     };
