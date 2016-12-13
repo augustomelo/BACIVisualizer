@@ -13,11 +13,11 @@ localhost:8080
 
 ## Code
 All the code must be written in English, and all the output to the user must be written in Portuguese.  
-The other convections must follow the eslint configuration, for the project were used the Google patter with some customizations.
+The other convections must follow the eslint configuration, for the project were used the Google patter with some customizations.  
 All script files on the export session should follow this pattern:
-- name
-- prop
-- data
+- name.
+- prop.
+- data.
 - and then the rest must follow the alphabetic order.
 
 ## Project Organization
