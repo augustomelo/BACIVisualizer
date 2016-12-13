@@ -10,13 +10,13 @@ const getters = {
 };
 
 const actions = {
-    add( { commit }, patient) {
+    addPatient( { commit }, patient) {
         commit(types.ADD_PATIENT, { patient });
     },
-    removeAll({ commit }) {
+    removeAllPatients({ commit }) {
         commit(types.REMOVE_ALL_PATIENTS);
     },
-    persistAll({ commit }) {
+    persistAllPatients({ commit }) {
         commit(types.PERSIST_ALL_PATIENTS);
     },
     loadPatients({ commit }) {

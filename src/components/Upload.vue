@@ -61,11 +61,11 @@
             };
         },
         methods: {
-            add: function(patient) {
-                this.$store.dispatch('add', patient);
+            addPatient: function(patient) {
+                this.$store.dispatch('addPatient', patient);
             },
-            persistAll: function() {
-                this.$store.dispatch('persistAll');
+            persistAllPatients: function() {
+                this.$store.dispatch('persistAllPatients');
             },
             isAdvancedUpload: function() {
                 if (window.File && window.FileReader &&
@@ -126,7 +126,7 @@
                 let self = this;
 
                 patients.Pacientes.Paciente.forEach(function(element) {
-                    self.add(element);
+                    self.addPatient(element);
                 });
 
                 let prct = Math.round((this.loadedFile + 1) / this.totalFile) * 100;
@@ -145,7 +145,7 @@
                     let self = this;
                     setTimeout(function() {
                         self.startedUpload = false;
-                        self.persistAll();
+                        self.persistAllPatients();
                     }, 1000);
                 }
             },

@@ -62,7 +62,7 @@
             identificator="modalRemove"
             title="Notificação de deleção"
             body="Você tem certeza que quer deletar PERMANETEMENTE as informação sobre os pacientes?"
-            :affirmativeCallBack="removeAll"/>
+            :affirmativeCallBack="removeAllPatients"/>
 
         <my-confirmation-modal
             identificator="modalDownload"
@@ -100,8 +100,8 @@
             openRemoveAllModal: function() {
                 $('#modalRemove').modal('open');
             },
-            removeAll: function() {
-                this.$store.dispatch('removeAll');
+            removeAllPatients: function() {
+                this.$store.dispatch('removeAllPatients');
             },
             openDownloadModal: function() {
                 $('#modalDownload').modal('open');
