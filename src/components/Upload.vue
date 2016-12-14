@@ -125,9 +125,16 @@
                 let patients = this.x2js.xml2js(contents);
                 let self = this;
 
-                patients.Pacientes.Paciente.forEach(function(element) {
-                    self.addPatient(element);
-                });
+                if (patients.Paciente.Pacientes.lengh != undefined) {
+                    patients.Paciente.Pacientes.forEach(function(element) {
+                        element.Psicologo = patients.Paciente.Psicologo;
+                        self.addPatient(element);
+                    });
+                }
+                else {
+                    patients.Paciente.Pacientes.Psicologo = patients.Paciente.Psicologo
+                    self.addPatient(patients.Paciente.Pacientes);
+                }
 
                 let prct = Math.round((this.loadedFile + 1) / this.totalFile) * 100;
                 this.loadProgress = prct + '%';
