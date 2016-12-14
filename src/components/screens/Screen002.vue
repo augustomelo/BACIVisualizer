@@ -98,6 +98,11 @@
 <script>
     export default {
         name: 'Screen002',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
             $('.datepicker').pickadate({

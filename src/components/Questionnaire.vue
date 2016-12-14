@@ -7,7 +7,7 @@
         <div>
             <transition name="questionnaire" mode="out-in">
                 <screen001 v-if="screen==1" key="screen001"/>
-                <screen002 v-if="screen==2" key="screen002"/>
+                <screen002 v-if="screen==2" key="screen002" :data="patients[index]"/>
                 <screen003 v-if="screen==3" key="screen003"/>
                 <screen004 v-if="screen==4" key="screen004"/>
                 <screen005 v-if="screen==5" key="screen005"/>
@@ -254,6 +254,7 @@
         data: function() {
             return {
                 screen: 1,
+                index: this.$route.params.userId
             };
         },
         components: {
@@ -373,6 +374,11 @@
             Screen112,
             Screen113,
             Screen114,
+        },
+        computed: {
+            patients: function(){
+                return this.$store.getters.getAllPatients;
+            },
         },
         methods: {
             update: function(page) {
