@@ -28,7 +28,7 @@
 
                 <tbody>
                     <tr v-for="(patient, index) in displayData" v-on:dblclick="showFullData(index)">
-                        <td>{{ patient.Nome }}</td>
+                        <td>{{ patient.Psicologo }}</td>
                         <td>{{ patient.Tela2.nomeAvaliado }}</td>
                         <td>{{ patient.Tela2.dataAplicacao }}</td>
                     </tr>
