@@ -8,132 +8,283 @@
         <div class="row">
             <div class="input-field col s4">
                 <h6>Palavras Recordadas 1ª lista</h6>
-                <p>
-                    <input type="checkbox" id="item1" disabled="disabled"/>
-                    <label for="item1">Boneca</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item2" disabled="disabled"/>
-                    <label for="item2">Estrela</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item3" disabled="disabled"/>
-                    <label for="item3">Cavalo</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item4" disabled="disabled"/>
-                    <label for="item4">Mesa</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item5" disabled="disabled"/>
-                    <label for="item5">Pato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item6" disabled="disabled"/>
-                    <label for="item6">Janela</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item7" disabled="disabled"/>
-                    <label for="item7">Árvore</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item8" disabled="disabled"/>
-                    <label for="item8">Livro</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item9" disabled="disabled"/>
-                    <label for="item9">Sapato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item10" disabled="disabled"/>
-                    <label for="item10">Copo</label>
-                </p>
             </div>
             <div class="input-field col s4">
                 <h6>Palavras Recordadas 2ª lista</h6>
-                <p>
-                    <input type="checkbox" id="item1" disabled="disabled"/>
-                    <label for="item1">Livro</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item2" disabled="disabled"/>
-                    <label for="item2">Mesa</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item3" disabled="disabled"/>
-                    <label for="item3">Sapato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item4" disabled="disabled"/>
-                    <label for="item4">Árvore</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item5" disabled="disabled"/>
-                    <label for="item5">Estrela</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item6" disabled="disabled"/>
-                    <label for="item6">Copo</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item7" disabled="disabled"/>
-                    <label for="item7">Boneca</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item8" disabled="disabled"/>
-                    <label for="item8">Pato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item9" disabled="disabled"/>
-                    <label for="item9">Cavalo</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item10" disabled="disabled"/>
-                    <label for="item10">Janela</label>
-                </p>
             </div>
             <div class="input-field col s4">
                 <h6>Palavras Recordadas 3ª lista</h6>
-                <p>
-                    <input type="checkbox" id="item1" disabled="disabled"/>
-                    <label for="item1">Árvore</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item2" disabled="disabled"/>
-                    <label for="item2">Pato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item3" disabled="disabled"/>
-                    <label for="item3">Copo</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item4" disabled="disabled"/>
-                    <label for="item4">Janela</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item5" disabled="disabled"/>
-                    <label for="item5">Cavalo</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item6" disabled="disabled"/>
-                    <label for="item6">Sapato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item7" disabled="disabled"/>
-                    <label for="item7">Livro</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item8" disabled="disabled"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.livro">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item1">Boneca</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.livro2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item1">Livro</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.livro3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item1">Árvore</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.mesa">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item2">Estrela</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.mesa2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item2">Mesa</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.mesa3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item2">Pato</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.sapato">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item3">Cavalo</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.sapato2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item3">Sapato</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.sapato3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item3">Copo</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.arvore">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item4">Mesa</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.arvore2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item4">Árvore</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.arvore3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item4">Janela</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.estrela">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item5">Pato</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.estrela2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item5">Estrela</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.estrela3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item5">Cavalo</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.copo">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item6">Janela</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.copo2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item6">Copo</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.copo3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item6">Sapato</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.boneca">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item7">Árvore</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.boneca2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item7">Boneca</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.boneca3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item7">Livro</label>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="input-field col s4">
+                    <select disabled v-model="data.Tela44.pato">
+                        <option value="empty"></option>
+                        <option value="true">Certo</option>
+                        <option value="false">Errado</option>
+                    </select>
+                    <label for="item8">Livro</label>
+                </div>
+                <div class="input-field col s4">
+                    <select disabled v-model="data.Tela44.pato2">
+                        <option value="empty"></option>
+                        <option value="true">Certo</option>
+                        <option value="false">Errado</option>
+                    </select>
+                    <label for="item8">Pato</label>
+                </div>
+                <div class="input-field col s4">
+                    <select disabled v-model="data.Tela44.pato3">
+                        <option value="empty"></option>
+                        <option value="true">Certo</option>
+                        <option value="false">Errado</option>
+                    </select>
                     <label for="item8">Mesa</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item9" disabled="disabled"/>
-                    <label for="item9">Boneca</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item10" disabled="disabled"/>
-                    <label for="item10">Estrela</label>
-                </p>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.cavalo">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item9">Sapato</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.cavalo2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item9">Cavalo</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.cavalo3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item9">Boneca</label>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.janela">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item10">Copo</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.janela2">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item10">Janela</label>
+            </div>
+            <div class="input-field col s4">
+                <select disabled v-model="data.Tela44.janela3">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item10">Estrela</label>
             </div>
         </div>
     </div>
@@ -141,7 +292,16 @@
 
 <script>
     export default {
-        name: 'Screen048'
+        name: 'Screen048',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
+        mounted: function() {
+            $('select').material_select();
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

@@ -7,47 +7,108 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <h6>2ª Lista</h6>
-                <p>
-                    <input type="checkbox" id="item1" disabled="disabled"/>
-                    <label for="item1">Prato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item2" disabled="disabled"/>
-                    <label for="item2">Coelho</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item3" disabled="disabled"/>
-                    <label for="item3">Batom</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item4" disabled="disabled"/>
-                    <label for="item4">Dado</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item5" disabled="disabled"/>
-                    <label for="item5">Gato</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item6" disabled="disabled"/>
-                    <label for="item6">Vaso</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item7" disabled="disabled"/>
-                    <label for="item7">Bola de gude</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item8" disabled="disabled"/>
-                    <label for="item8">Violão</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item9" disabled="disabled"/>
-                    <label for="item9">Pincel</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="item10" disabled="disabled"/>
-                    <label for="item10">Flor</label>
-                </p>
+                <select disabled v-model="data.Tela52.Flor">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item1">Prato</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Gato">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item2">Coelho</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Vaso">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item3">Batom</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Pincel">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item4">Dado</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Coelho">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item6">Gato</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Violao">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item6">Vaso</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Dado">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item7">Bola de gude</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Batom">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item8">Violão</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Prato">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item8">Pincel</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select disabled v-model="data.Tela52.Gude">
+                    <option value="empty"></option>
+                    <option value="true">Certo</option>
+                    <option value="false">Errado</option>
+                </select>
+                <label for="item8">Flor</label>
             </div>
         </div>
     </div>
@@ -55,7 +116,16 @@
 
 <script>
     export default {
-        name: 'Screen056'
+        name: 'Screen056',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
+        mounted: function() {
+            $('select').material_select();
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

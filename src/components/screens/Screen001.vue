@@ -1,24 +1,9 @@
 <template>
     <div class="row">
         <div class="row">
-            <div class="input-field col s6">
-                <input disabled value="" type="text" class="validate">
+            <div class="input-field col s12">
+                <input disabled v-model="data.Psicologo" type="text" class="validate">
                 <label for="disabled">Nome profissional</label>
-            </div>
-            <div class="input-field col s6">
-                <input disabled value="" type="text" class="validate">
-                <label for="disabled">E-mail</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s6">
-                <input disabled value="" type="text" class="validate">
-                <label for="disabled">CRP</label>
-            </div>
-            <div class="input-field col s6">
-                <input disabled value="" type="text" class="validate">
-                <label for="disabled">Código Acesso</label>
             </div>
         </div>
     </div>
@@ -26,7 +11,16 @@
 
 <script>
     export default {
-        name: 'Screen001'
+        name: 'Screen001',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
+        mounted: function() {
+            $('select').material_select();
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

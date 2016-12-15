@@ -20,9 +20,15 @@
 <script>
     export default {
         name: 'Screen112',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
+            Materialize.updateTextFields();
+        },
     };
 </script>
 
