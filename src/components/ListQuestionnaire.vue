@@ -12,7 +12,7 @@
             </div>
             <div class="input-field col s9">
                 <my-search :data="allData" 
-                    :properties="['Nome', 'Tela2.nomeAvaliado', 'Tela2.dataAplicacao']" 
+                    :properties="['Psicologo', 'Tela2.nomeAvaliado', 'Tela2.dataAplicacao']" 
                     :callback="updateTable"/>
             </div>
         </div>
