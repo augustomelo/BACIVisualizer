@@ -302,7 +302,7 @@
 				<copo3>true</copo3>
 				<boneca3>true</boneca3>
 				<pato3>true</pato3>
-				<cavalo3>true</cavalo3>
+				<cavalo3>false</cavalo3>
 				<janela3>true</janela3>
 			</Tela44>
 			<Tela45>

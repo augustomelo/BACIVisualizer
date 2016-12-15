@@ -5,25 +5,34 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela175.pontuacao">
                     <option value="empty"></option>
-                    <option>Certo - 1 ponto</option>
-                    <option>Errado - 0 pontos</option>
+                    <option value="1">Certo - 1 ponto</option>
+                    <option value="0">Errado - 0 pontos</option>
                 </select>
                 <label for="disabled">Pontuação</label>
             </div>
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela175.comeco">
                     <option value="empty"></option>
-                    <option>Relógio digital</option>
-                    <option>Começou pelo círculo</option>
-                    <option>Começou pelo número 12</option>
-                    <option>Começou pelo número 1</option>
-                    <option>Começou por outra parte</option>
-                    <option>Faltam elementos</option>
-                    <option>Há elementos que não estavam na imagem</option>
+                    <option value="digital">Relógio digital</option>
+                    <option value="circulo">Começou pelo círculo</option>
+                    <option value="numero">Começou pelo número 12</option>
+                    <option value="numero1">Começou pelo número 1</option>
+                    <option value="outro">Começou por outra parte</option>
                 </select>
                 <label for="disabled">Por onde começou</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela175.faltar" type="text" class="validate">
+                <label for="disabled">Faltam partes</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela175.sobrar" type="text" class="validate">
+                <label for="disabled">Há elementos que não estavam na imagem</label>
             </div>
         </div>
     </div>
@@ -31,10 +40,16 @@
 
 <script>
     export default {
-        name: 'Screen017',
+        name: 'Screen021',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

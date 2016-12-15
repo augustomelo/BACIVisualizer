@@ -5,23 +5,32 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela172.pontuacao">
                     <option value="empty"></option>
-                    <option>Certo - 1 ponto</option>
-                    <option>Errado - 0 pontos</option>
+                    <option value="1">Certo - 1 ponto</option>
+                    <option value="0">Errado - 0 pontos</option>
                 </select>
                 <label for="disabled">Pontuação</label>
             </div>
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela172.comeco">
                     <option value="empty"></option>
-                    <option>Começou pelo trinângulo frontal</option>
-                    <option>Começou pelo triângulo lateral</option>
-                    <option>Começou por outro ponto</option>
-                    <option>Faltam partes</option>
-                    <option>Há elementos que não estavam na imagem</option>
+                    <option value="frontal">Começou pelo trinângulo frontal</option>
+                    <option value="lateral">Começou pelo triângulo lateral</option>
+                    <option value="outro">Começou por outro ponto</option>
                 </select>
                 <label for="disabled">Por onde começou</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela172.faltar" type="text" class="validate">
+                <label for="disabled">Faltam partes</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela172.sobrar" type="text" class="validate">
+                <label for="disabled">Há elementos que não estavam na imagem</label>
             </div>
         </div>
     </div>
@@ -29,10 +38,16 @@
 
 <script>
     export default {
-        name: 'Screen017',
+        name: 'Screen018',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

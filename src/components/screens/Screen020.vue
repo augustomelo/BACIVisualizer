@@ -5,23 +5,32 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela174.pontuacao">
                     <option value="empty"></option>
-                    <option>Certo - 1 ponto</option>
-                    <option>Errado - 0 pontos</option>
+                    <option value="1">Certo - 1 ponto</option>
+                    <option value="0">Errado - 0 pontos</option>
                 </select>
                 <label for="disabled">Pontuação</label>
             </div>
             <div class="input-field col s6">
-                <select disabled>
+                <select disabled v-model="data.Tela174.comeco">
                     <option value="empty"></option>
-                    <option>Tem menos de 5 pontas</option>
-                    <option>Tem mais de 5 pontas</option>
-                    <option>Feito com triângulos sobrepostos</option>
-                    <option>Faltam partes</option>
-                    <option>Há elementos que não estavam na imagem</option>
+                    <option value="menos">Tem menos de 5 pontas</option>
+                    <option value="mais">Tem mais de 5 pontas</option>
+                    <option value="sobreposto">Feito com triângulos sobrepostos</option>
                 </select>
                 <label for="disabled">Por onde começou</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela174.faltar" type="text" class="validate">
+                <label for="disabled">Faltam partes</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled v-model="data.Tela174.sobrar" type="text" class="validate">
+                <label for="disabled">Há elementos que não estavam na imagem</label>
             </div>
         </div>
     </div>
@@ -29,10 +38,16 @@
 
 <script>
     export default {
-        name: 'Screen017',
+        name: 'Screen020',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

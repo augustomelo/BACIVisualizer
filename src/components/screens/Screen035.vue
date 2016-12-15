@@ -5,10 +5,10 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <select disabled>
+                <select disabled v-model="data.Tela31.quadrado">
                     <option value="empty"></option>
-                    <option>Iguais</option>
-                    <option>Diferentes</option>
+                    <option value="maior">Iguais</option>
+                    <option value="menor">Diferentes</option>
                 </select>
                 <label for="disabled">As figuras são</label>
             </div>
@@ -19,10 +19,15 @@
 <script>
     export default {
         name: 'Screen035',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
-
+            Materialize.updateTextFields();
+        },
     };
 </script>
 

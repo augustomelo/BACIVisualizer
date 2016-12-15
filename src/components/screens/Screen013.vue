@@ -2,11 +2,11 @@
     <div class="row">
         <div class="row">
             <div class="input-field col s12">
-                <select disabled>
+                <select disabled v-model="data.Tela13.pontuacao">
                     <option value="empty"></option>
-                    <option value="nao">0 pontos - se o testando permanecer passivo</option>
-                    <option value="simComAjuda">1 ponto - se o comportamento do testando for duvidoso e ajuda ativa</option>
-                    <option value="simComAjuda">2 ponto - se o testando copiar ativamente o movimento solicitado</option>
+                    <option value="0">0 pontos - se o testando permanecer passivo</option>
+                    <option value="1">1 ponto - se o comportamento do testando for duvidoso e ajuda ativa</option>
+                    <option value="2">2 ponto - se o testando copiar ativamente o movimento solicitado</option>
                 </select>
                 <label for="disabled">Pontuação</label>
             </div>
@@ -17,9 +17,15 @@
 <script>
     export default {
         name: 'Screen013',
+        props: {
+            data: {
+                type: Object,
+            },
+        },
         mounted: function() {
             $('select').material_select();
-        }
+            Materialize.updateTextFields();
+        },
     };
 </script>
 
