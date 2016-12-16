@@ -4,7 +4,7 @@
             <h5>Nomeação</h5>
         </div>
         <div class="row">
-            <img class="materialboxed my-align" src="../../assets/images/screens/screen071.png" />
+            <img class="materialboxed my-align" width="450" src="../../assets/images/screens/screen071.png" />
         </div>
         <div class="row">
             <div class="input-field col s12">

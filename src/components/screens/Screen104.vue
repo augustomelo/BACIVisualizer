@@ -1,10 +1,10 @@
 <template>
     <div class="row">
         <div class="row">
-            <img class="materialboxed my-align" src="../../assets/images/screens/screen104.png" />
+            <img class="materialboxed my-align" width="450" src="../../assets/images/screens/screen104.png" />
         </div>
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s12">
                 <select disabled>
                     <option value="empty"></option>
                     <option>Certo - 1 ponto</option>

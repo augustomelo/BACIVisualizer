@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <img class="materialboxed my-align" src="../../assets/images/screens/screen085.png" />
+        <img class="materialboxed my-align" width="450" src="../../assets/images/screens/screen085.png" />
     </div>
 </template>
 
