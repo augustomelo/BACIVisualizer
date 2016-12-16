@@ -21,7 +21,7 @@
         name: 'Screen105',
         mounted: function() {
             $('select').material_select();
-        }
+        },
     };
 </script>
 

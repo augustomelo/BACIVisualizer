@@ -220,6 +220,11 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    let data = {};
+                    data.Tela48 = {};
+                    return data;
+                },
             },
         },
         mounted: function() {

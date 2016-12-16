@@ -80,6 +80,11 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    let data = {};
+                    data.Tela55 = {};
+                    return data;
+                },
             },
         },
         mounted: function() {

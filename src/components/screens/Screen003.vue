@@ -82,6 +82,11 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    let data = {};
+                    data.Tela3 = {};
+                    return data;
+                },
             },
         },
         mounted: function() {

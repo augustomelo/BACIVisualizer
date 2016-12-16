@@ -15,6 +15,9 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    return {};
+                },
             },
         },
         mounted: function() {

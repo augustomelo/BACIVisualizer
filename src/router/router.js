@@ -26,6 +26,10 @@ export default new VueRouter({
             component: ListQuestionnaireView,
         },
         {
+            path: '/questionnaire',
+            component: QuestionnaireView,
+        },
+        {
             path: '/questionnaire/:userId',
             name: 'questionnaire',
             component: QuestionnaireView,

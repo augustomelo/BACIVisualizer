@@ -25,6 +25,11 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    let data = {};
+                    data.Tela7 = {};
+                    return data;
+                },
             },
         },
         mounted: function() {

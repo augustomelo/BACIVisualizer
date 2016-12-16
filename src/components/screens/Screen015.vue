@@ -33,6 +33,11 @@
         props: {
             data: {
                 type: Object,
+                default: function() {
+                    let data = {};
+                    data.Tela15 = {};
+                    return data;
+                },
             },
         },
         mounted: function() {
