@@ -127,12 +127,9 @@
 
                 if (patients.Paciente.Pacientes.lengh != undefined) {
                     patients.Paciente.Pacientes.forEach(function(element) {
-                        element.Psicologo = patients.Paciente.Psicologo;
                         self.addPatient(element);
                     });
-                }
-                else {
-                    patients.Paciente.Pacientes.Psicologo = patients.Paciente.Psicologo
+                } else {
                     self.addPatient(patients.Paciente.Pacientes);
                 }
 

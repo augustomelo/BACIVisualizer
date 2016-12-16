@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 	<Paciente>
 		<Pacientes>
-			<Nome>Danilo</Nome>
-			<TelaAtual>55</TelaAtual>
+			<Nome>Augusto</Nome>
+			<TelaAtual>56</TelaAtual>
 			<Flag>1</Flag>
+			<Psicologo>Danilo Carneiro Ikeda</Psicologo>
 			<Tela2>
-				<dataAplicacao>1992-03-07</dataAplicacao>
-				<nomeAvaliado>Danilo</nomeAvaliado>
-				<dataNascimento>1992-03-07</dataNascimento>
+				<dataAplicacao>2016-12-14</dataAplicacao>
+				<nomeAvaliado>Augusto</nomeAvaliado>
+				<dataNascimento>1992-07-03</dataNascimento>
 				<lateralidade>destro</lateralidade>
-				<escolaridade>analfabeto</escolaridade>
+				<escolaridade>inicio</escolaridade>
 				<trabalho>Estudante</trabalho>
 				<trabalhoAtual>trabalhando</trabalhoAtual>
 				<naturalidade>Fernandopolis-SP</naturalidade>
 				<sexo>masculino</sexo>
 				<limitacaoCorporal>naoCorporal</limitacaoCorporal>
-				<problemaVisual>naoVisivel</problemaVisual>
+				<problemaVisual>simVisivel</problemaVisual>
+				<idade>24</idade>
 			</Tela2>
 			<Tela3>
-				<motivo>motivoMedico</motivo>
-				<descricaoSintomas>Dor de cabeca</descricaoSintomas>
+				<motivo>motivoCognitivo</motivo>
+				<descricaoSintomas>Dor de cabeça</descricaoSintomas>
 				<sintomas>sintomasAparecem</sintomas>
-				<variedadeSintoma>variedadeFlutuante</variedadeSintoma>
+				<perceberSintomas>Há 2 semanas</perceberSintomas>
+				<inicio>abrupto</inicio>
+				<variedadeSintoma>variedadeIntensidade</variedadeSintoma>
 				<medicamento>medicamentoSim</medicamento>
 				<usoContinuo>continuoSim</usoContinuo>
 				<quaisMedicamentos>Neosaldina</quaisMedicamentos>
 			</Tela3>
 			<Tela4>
 				<banho>banhoNao</banho>
-				<vestir>vestirNao</vestir>
-				<comer>comerAjuda</comer>
-				<tomarMedicacao>tomarMedicacaoAjuda</tomarMedicacao>
-				<locomover>locomoverSim</locomover>
+				<vestir>vestirAjuda</vestir>
+				<comer>comerSim</comer>
+				<tomarMedicacao>tomarMedicacaoNao</tomarMedicacao>
+				<locomover>locomoverAjuda</locomover>
 				<sairCasa>sairCasaSim</sairCasa>
-				<prepararRefeicao>prepararRefeicaoSim</prepararRefeicao>
+				<prepararRefeicao>prepararRefeicaoNao</prepararRefeicao>
 				<compras>comprasAjuda</compras>
-				<financeiros>financeirosNao</financeiros>
+				<financeiros>financeirosSim</financeiros>
 				<obrigacoesDiariaCasa>obrigacoesDiariaCasaSim</obrigacoesDiariaCasa>
-				<obrigacoesDiariaFora>obrigacoesDiariaForaNao</obrigacoesDiariaFora>
+				<obrigacoesDiariaFora>obrigacoesDiariaForaSim</obrigacoesDiariaFora>
+				<obrigacoesDiariaCasaText>Varrer a casa</obrigacoesDiariaCasaText>
+				<obrigacoesDiariaForaText>Pagar conta</obrigacoesDiariaForaText>
 			</Tela4>
 			<Tela5>
 				<diaSemana>semanaNao</diaSemana>
-				<diaMes>mesSim</diaMes>
-				<ano>anoSim</ano>
+				<diaMes>mesNao</diaMes>
+				<ano>anoNao</ano>
 				<horas>horasSim</horas>
 				<ondeEstamos>ondeSim</ondeEstamos>
-				<local>localNao</local>
-				<instituicao>instSim</instituicao>
-				<bairro>bairroSim</bairro>
-				<cidade>cidadeSim</cidade>
-				<estado>estadoNao</estado>
+				<local>localSim</local>
+				<instituicao>instNao</instituicao>
+				<bairro>bairroNao</bairro>
+				<cidade>cidadeNao</cidade>
+				<estado>estadoSim</estado>
 				<totalAcerto>ac2</totalAcerto>
-				<calc1>calc1Sim</calc1>
-				<calc2>calc2Nao</calc2>
+				<calc1>calc1Nao</calc1>
+				<calc2>calc2Sim</calc2>
 				<calc3>calc3Nao</calc3>
-				<calc4>calc4Nao</calc4>
+				<calc4>calc4Sim</calc4>
 				<calc5>calc5Nao</calc5>
-				<memoria>mem2</memoria>
-				<lapis>lapisNao</lapis>
-				<relogio>relogioNao</relogio>
-				<frase>fraseNao</frase>
-				<papel>pa1</papel>
+				<memoria>mem3</memoria>
+				<lapis>lapisSimSim</lapis>
+				<relogio>relogioSim</relogio>
+				<frase>fraseSim</frase>
+				<papel>pa2</papel>
 			</Tela5>
 			<Tela7>
 				<compreensao>compreensao2</compreensao>
@@ -68,180 +74,179 @@
 			</Tela7>
 			<Tela9>
 				<ex1>on</ex1>
-				<ex2>on</ex2>
+				<ex2></ex2>
 				<ex3>on</ex3>
 				<ex4></ex4>
-				<ex5></ex5>
+				<ex5>on</ex5>
 				<ex6></ex6>
-				<ex7></ex7>
+				<ex7>on</ex7>
 				<ex8></ex8>
-				<ex9></ex9>
+				<ex9>on</ex9>
 				<ex10></ex10>
-				<ex11></ex11>
+				<ex11>on</ex11>
 				<ex12></ex12>
 				<ex13>on</ex13>
-				<ex14>on</ex14>
+				<ex14></ex14>
 				<ex15>on</ex15>
 			</Tela9>
 			<Tela10>
 				<infeliz>nunca1</infeliz>
-				<tolerar>algumasvezes2</tolerar>
+				<tolerar>nunca2</tolerar>
 				<companhia>nunca3</companhia>
-				<compreende>algumasvezes4</compreende>
-				<esperando>algumasvezes5</esperando>
-				<recorrer>nunca6</recorrer>
-				<proximoNinguem>nunca7</proximoNinguem>
+				<compreende>raramente4</compreende>
+				<esperando>raramente5</esperando>
+				<recorrer>algumasvezes6</recorrer>
+				<proximoNinguem>algumasvezes7</proximoNinguem>
 				<rodeiam>frequentemente8</rodeiam>
-				<excluido>nunca9</excluido>
+				<excluido>frequentemente9</excluido>
 				<sozinho>nunca10</sozinho>
-				<comunicar>frequentemente11</comunicar>
+				<comunicar>raramente11</comunicar>
 				<superficiais>algumasvezes12</superficiais>
-				<carente>raramente13</carente>
+				<carente>frequentemente13</carente>
 				<conhece>nunca14</conhece>
-				<isolado>frequentemente15</isolado>
-				<infelizExcluindo>raramente16</infelizExcluindo>
-				<amigos>algumasvezes17</amigos>
+				<isolado>raramente15</isolado>
+				<infelizExcluindo>algumasvezes16</infelizExcluindo>
+				<amigos>frequentemente17</amigos>
 				<bloqueado>nunca18</bloqueado>
-				<redor>frequentemente19</redor>
-				<atividades>raramente20</atividades>
+				<redor>raramente19</redor>
+				<atividades>algumasvezes20</atividades>
 			</Tela10>
 			<Tela11>
 				<frequencia>primeiro1</frequencia>
-				<reconhecer>segundo2</reconhecer>
-				<atividade>primeiro3</atividade>
+				<reconhecer>primeiro2</reconhecer>
+				<atividade>segundo3</atividade>
 				<acabaram>segundo4</acabaram>
-				<anotar>primeiro5</anotar>
-				<compromissos>primeiro6</compromissos>
+				<anotar>segundo5</anotar>
+				<compromissos>segundo6</compromissos>
 				<nomepessoas>primeiro7</nomepessoas>
 				<rostopessoas>primeiro8</rostopessoas>
 				<recentemente>segundo9</recentemente>
 				<dezanos>segundo10</dezanos>
-				<historia>segundo11</historia>
+				<historia>primeiro11</historia>
 				<objeto>segundo12</objeto>
-				<recado>primeiro13</recado>
+				<recado>segundo13</recado>
 				<memoria>primeiro14</memoria>
 			</Tela11>
 			<Tela12>
-				<pontuacao>0</pontuacao>
+				<pontuacao>1</pontuacao>
 			</Tela12>
 			<Tela13>
 				<pontuacao>1</pontuacao>
 			</Tela13>
 			<Tela14>
-				<pontuacao>3</pontuacao>
+				<pontuacao>0</pontuacao>
 			</Tela14>
 			<Tela15>
-				<pontuacao>2</pontuacao>
+				<pontuacao>10</pontuacao>
 			</Tela15>
 			<Tela17>
-				<pontuacao>1</pontuacao>
-				<comeco>outro</comeco>
+				<pontuacao>0</pontuacao>
+				<comeco>triangulo</comeco>
 				<faltar>falta</faltar>
-				<sobrar></sobrar>
+				<sobrar>sobra</sobrar>
 			</Tela17>
 			<Tela172>
 				<pontuacao>1</pontuacao>
-				<comeco>frontal</comeco>
-				<faltar></faltar>
-				<sobrar></sobrar>
+				<comeco>lateral</comeco>
+				<faltar>falta</faltar>
+				<sobrar>sobra</sobrar>
 			</Tela172>
 			<Tela173>
 				<pontuacao>0</pontuacao>
-				<comeco>nervuras</comeco>
-				<faltar></faltar>
+				<comeco>outro</comeco>
+				<faltar>falta</faltar>
 				<sobrar></sobrar>
 			</Tela173>
 			<Tela174>
-				<pontuacao>1</pontuacao>
-				<comeco>mais</comeco>
-				<faltar>falta</faltar>
+				<pontuacao>0</pontuacao>
+				<comeco>menos</comeco>
+				<faltar></faltar>
 				<sobrar></sobrar>
 			</Tela174>
 			<Tela175>
-				<pontuacao>1</pontuacao>
-				<comeco>digital</comeco>
+				<pontuacao>0</pontuacao>
+				<comeco>outro</comeco>
 				<faltar>falta</faltar>
 				<sobrar>sobra</sobrar>
 			</Tela175>
 			<Tela18>
 				<item1>certo1</item1>
 				<item2>errado2</item2>
-				<item3>certo3</item3>
+				<item3>errado3</item3>
 				<item4>errado4</item4>
-				<item5>certo5</item5>
 				<sensibilidade>sens3</sensibilidade>
 				<controle>cont2</controle>
 			</Tela18>
 			<Tela21>
-				<lembrar>lembrarNao</lembrar>
-				<organizar>orgAjuda</organizar>
-				<ordenar>ordSim</ordenar>
+				<lembrar>lembrarSim</lembrar>
+				<organizar>orgSim</organizar>
+				<ordenar>ordAjuda</ordenar>
 				<descrever>descNao</descrever>
 				<contar>contarSim</contar>
 				<intrusao>intNao</intrusao>
 				<confabular>confSim</confabular>
-				<coerencia>coeSim</coerencia>
+				<coerencia>coeNao</coerencia>
 				<pausa>pausaSim</pausa>
-				<repetir>repNao</repetir>
-				<observacoes>O paciente conseguiu lembrar de algumas coisas</observacoes>
+				<repetir>repSim</repetir>
+				<observacoes>Descricao de alguma coisa</observacoes>
 			</Tela21>
 			<Tela24>
-				<grande>grande4</grande>
-				<menor>menor3</menor>
-				<linha>linha2</linha>
-				<retangulo>retangulo1</retangulo>
-				<quatro>quatro4</quatro>
-				<seta>seta3</seta>
-				<vertical>vertical2</vertical>
-				<cortando>cortando1</cortando>
-				<esquerda>esquerda4</esquerda>
-				<externo>externo3</externo>
-				<metade>metade2</metade>
-				<z>z1</z>
-				<circulo>circulo4</circulo>
-				<dentro>dentro3</dentro>
-				<inferior>inferior2</inferior>
-				<quadrado>quadrado1</quadrado>
-				<inicio>inicio4</inicio>
-				<meio>meio3</meio>
-			</Tela24>
-			<Tela25>
-				<grande>grande1</grande>
+				<grande>grande5</grande>
 				<menor>menor4</menor>
 				<linha>linha3</linha>
-				<retangulo>retangulo2</retangulo>
-				<quatro>quatro1</quatro>
+				<retangulo>retangulo1</retangulo>
+				<quatro>quatro5</quatro>
 				<seta>seta4</seta>
 				<vertical>vertical3</vertical>
-				<cortando>cortando2</cortando>
-				<esquerda>esquerda1</esquerda>
+				<cortando>cortando1</cortando>
+				<esquerda>esquerda5</esquerda>
 				<externo>externo4</externo>
 				<metade>metade3</metade>
 				<z>z2</z>
 				<circulo>circulo1</circulo>
-				<dentro>dentro4</dentro>
-				<inferior>inferior3</inferior>
-				<quadrado>quadrado2</quadrado>
-				<inicio>inicio1</inicio>
-				<meio>meio4</meio>
+				<dentro>dentro5</dentro>
+				<inferior>inferior4</inferior>
+				<quadrado>quadrado3</quadrado>
+				<inicio>inicio2</inicio>
+				<meio>meio1</meio>
+			</Tela24>
+			<Tela25>
+				<grande>grande5</grande>
+				<menor>menor4</menor>
+				<linha>linha3</linha>
+				<retangulo>retangulo2</retangulo>
+				<quatro>quatro1</quatro>
+				<seta>seta5</seta>
+				<vertical>vertical4</vertical>
+				<cortando>cortando3</cortando>
+				<esquerda>esquerda2</esquerda>
+				<externo>externo1</externo>
+				<metade>metade5</metade>
+				<z>z4</z>
+				<circulo>circulo3</circulo>
+				<dentro>dentro2</dentro>
+				<inferior>inferior1</inferior>
+				<quadrado>quadrado5</quadrado>
+				<inicio>inicio4</inicio>
+				<meio>meio3</meio>
 			</Tela25>
 			<Tela27>
 				<quadrado>maior</quadrado>
 			</Tela27>
 			<Tela28>
-				<quadrado>maior</quadrado>
+				<quadrado>menor</quadrado>
 			</Tela28>
 			<Tela29>
-				<quadrado>menor</quadrado>
+				<quadrado>maior</quadrado>
 			</Tela29>
 			<Tela30>
-				<quadrado>menor</quadrado>
+				<quadrado>maior</quadrado>
 			</Tela30>
 			<Tela31>
-				<quadrado>maior</quadrado>
+				<quadrado>menor</quadrado>
 			</Tela31>
 			<Tela32>
-				<quadrado>menor</quadrado>
+				<quadrado>maior</quadrado>
 			</Tela32>
 			<Tela33>
 				<quadrado>menor</quadrado>
@@ -259,32 +264,32 @@
 				<quadrado>maior</quadrado>
 			</Tela38>
 			<Tela39>
-				<quadrado>maior</quadrado>
+				<quadrado>menor</quadrado>
 			</Tela39>
 			<Tela40>
-				<quadrado>menor</quadrado>
+				<quadrado>maior</quadrado>
 			</Tela40>
 			<Tela41>
 				<quadrado>menor</quadrado>
 			</Tela41>
 			<Tela42>
-				<quadrado>menor</quadrado>
+				<quadrado>maior</quadrado>
 			</Tela42>
 			<Tela43>
 				<quadrado>menor</quadrado>
 			</Tela43>
 			<Tela44>
 				<livro>true</livro>
-				<mesa>true</mesa>
-				<sapato>true</sapato>
-				<arvore>true</arvore>
-				<estrela>true</estrela>
-				<copo>true</copo>
-				<boneca>true</boneca>
-				<pato>true</pato>
-				<cavalo>true</cavalo>
+				<mesa>false</mesa>
+				<sapato>false</sapato>
+				<arvore>false</arvore>
+				<estrela>false</estrela>
+				<copo>false</copo>
+				<boneca>false</boneca>
+				<pato>false</pato>
+				<cavalo>false</cavalo>
 				<janela>true</janela>
-				<livro2>true</livro2>
+				<livro2>false</livro2>
 				<mesa2>true</mesa2>
 				<sapato2>true</sapato2>
 				<arvore2>true</arvore2>
@@ -293,81 +298,81 @@
 				<boneca2>true</boneca2>
 				<pato2>true</pato2>
 				<cavalo2>true</cavalo2>
-				<janela2>true</janela2>
+				<janela2>false</janela2>
 				<livro3>true</livro3>
-				<mesa3>true</mesa3>
-				<sapato3>true</sapato3>
-				<arvore3>true</arvore3>
-				<estrela3>true</estrela3>
+				<mesa3>false</mesa3>
+				<sapato3>false</sapato3>
+				<arvore3>false</arvore3>
+				<estrela3>false</estrela3>
 				<copo3>true</copo3>
-				<boneca3>true</boneca3>
-				<pato3>true</pato3>
+				<boneca3>false</boneca3>
+				<pato3>false</pato3>
 				<cavalo3>false</cavalo3>
 				<janela3>true</janela3>
 			</Tela44>
 			<Tela45>
 				<ex1>true</ex1>
-				<ex2>true</ex2>
+				<ex2>false</ex2>
 				<ex3>true</ex3>
-				<ex4>true</ex4>
+				<ex4>false</ex4>
 				<ex5>true</ex5>
-				<ex6>true</ex6>
+				<ex6>false</ex6>
 				<ex7>true</ex7>
-				<ex8>true</ex8>
+				<ex8>false</ex8>
 			</Tela45>
 			<Tela46>
-				<ex1>true</ex1>
-				<ex2>true</ex2>
-				<ex3>true</ex3>
-				<ex4>true</ex4>
-				<ex5>true</ex5>
-				<ex6>true</ex6>
-				<ex7>true</ex7>
-				<ex8>true</ex8>
+				<ex1>false</ex1>
+				<ex2>false</ex2>
+				<ex3>false</ex3>
+				<ex4>false</ex4>
+				<ex5>false</ex5>
+				<ex6>false</ex6>
+				<ex7>false</ex7>
+				<ex8>false</ex8>
 			</Tela46>
 			<Tela47>
 				<livro>true</livro>
-				<mesa>true</mesa>
+				<mesa>false</mesa>
 				<sapato>true</sapato>
-				<arvore>true</arvore>
+				<arvore>false</arvore>
 				<estrela>true</estrela>
-				<copo>true</copo>
+				<copo>false</copo>
 				<boneca>true</boneca>
-				<pato>true</pato>
+				<pato>false</pato>
 				<cavalo>true</cavalo>
-				<janela>true</janela>
+				<janela>false</janela>
 			</Tela47>
 			<Tela48>
 				<carro>true</carro>
-				<estrela>true</estrela>
+				<estrela>false</estrela>
 				<cavalo>true</cavalo>
-				<coracao>true</coracao>
+				<coracao>false</coracao>
 				<pato>true</pato>
-				<pera>true</pera>
+				<pera>false</pera>
 				<arvore>true</arvore>
-				<onibus>true</onibus>
+				<onibus>false</onibus>
 				<sapato>true</sapato>
-				<copo>true</copo>
+				<copo>false</copo>
 				<rato>true</rato>
-				<janela>true</janela>
+				<janela>false</janela>
 				<sopa>true</sopa>
-				<boneca>true</boneca>
+				<boneca>false</boneca>
 				<caderno>true</caderno>
-				<nuvem>true</nuvem>
+				<nuvem>false</nuvem>
 				<mesa>true</mesa>
-				<caixa>true</caixa>
-				<livro>true</livro>
+				<caixa>false</caixa>
+				<livro>false</livro>
 				<vestido>true</vestido>
 			</Tela48>
 			<Tela50>
 				<Flor>true</Flor>
-				<Gato>true</Gato>
+				<Gato>false</Gato>
 				<Vaso>true</Vaso>
 				<Pincel>true</Pincel>
 				<Coelho>true</Coelho>
-				<Violao>true</Violao>
+				<Violao>false</Violao>
 				<Dado>true</Dado>
-				<Batom>true</Batom>
+				<Batom>false</Batom>
 				<Prato>true</Prato>
 				<Gude>true</Gude>
 			</Tela50>
@@ -377,35 +382,34 @@
 				<Vaso>true</Vaso>
 				<Pincel>true</Pincel>
 				<Coelho>true</Coelho>
-				<Violao>true</Violao>
-				<Dado>true</Dado>
-				<Batom>true</Batom>
-				<Prato>true</Prato>
-				<Gude>true</Gude>
+				<Violao>false</Violao>
+				<Dado>false</Dado>
+				<Batom>false</Batom>
+				<Prato>false</Prato>
+				<Gude>false</Gude>
 			</Tela52>
 			<Tela54>
-				<Flor>true</Flor>
+				<Flor>false</Flor>
 				<Gato>true</Gato>
 				<Vaso>true</Vaso>
 				<Pincel>true</Pincel>
 				<Coelho>true</Coelho>
-				<Violao>true</Violao>
-				<Dado>true</Dado>
-				<Batom>true</Batom>
+				<Violao>false</Violao>
+				<Dado>false</Dado>
+				<Batom>false</Batom>
 				<Prato>true</Prato>
-				<Gude>true</Gude>
+				<Gude>false</Gude>
 			</Tela54>
 			<Tela55>
 				<ex1>true</ex1>
-				<ex2>true</ex2>
+				<ex2>false</ex2>
 				<ex3>true</ex3>
-				<ex4>true</ex4>
+				<ex4>false</ex4>
 				<ex5>true</ex5>
-				<ex6>true</ex6>
+				<ex6>false</ex6>
 				<ex7>true</ex7>
-				<ex8>true</ex8>
+				<ex8>false</ex8>
 			</Tela55>
 		</Pacientes>
-		<Psicologo>Danilo Carneiro Ikeda</Psicologo>
 	</Paciente>
 	

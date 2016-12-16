@@ -109,7 +109,7 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea disabled id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea disabled v-model="data.Tela4.obrigacoesDiariaCasaText" class="materialize-textarea"></textarea>
                     <label for="disabled">Descrição</label>
                 </div>
             </div>
@@ -129,7 +129,7 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea disabled id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea disabled v-model="data.Tela4.obrigacoesDiariaForaText" class="materialize-textarea"></textarea>
                     <label for="disabled">Descrição</label>
                 </div>
             </div>

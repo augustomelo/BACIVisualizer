@@ -13,8 +13,7 @@
         </div>
 
         <div class="row">
-            <div class="input-field col s4">
-                <select disabled v-model="data.Tela5.diaSemana">
+            <div class="input-field col s4"> <select disabled v-model="data.Tela5.diaSemana">
                     <option value="empty"></option>
                     <option value="semanaNao">Resposta errada</option>
                     <option value="semanaSim">Resposta certa</option>
@@ -265,7 +264,7 @@
                     <label for="disabled">Pontuação na Lembraças(memória e evocação)</label>
                 </div>
                 <div class="input-field col s6">
-                    <input disabled value="" type="text" class="validate">
+                    <input disabled v-model="data.Tela5.linguagem" type="text" class="validate">
                     <label for="disabled">Pontuação na Linguagem</label>
                 </div>
             </div>

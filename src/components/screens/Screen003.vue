@@ -21,8 +21,8 @@
         </div>
 
         <div class="row">
-            <div class="input-field col s5">
-                <select disabled >
+            <div class="input-field col s6">
+                <select disabled v-model="data.Tela3.inicio">
                     <option value="empty"></option>
                     <option value="gradual">Gradual, insidioso</option>
                     <option value="abrupto">Abrupto, com episódio inicial distinguível</option>
@@ -30,15 +30,17 @@
                 <label for="disabled">O início dos sitomas foi:</label>
             </div>
 
-            <div class="input-field col s3">
+            <div class="input-field col s6">
                 <select disabled v-model="data.Tela3.sintomas">
                     <option value="empty"></option>
                     <option value="sintomasPresentes">Estão sempre presentes</option>
                     <option value="sintomasAparecem">Aparecem e desaparecem</option>
                 </select>
-                <label for="disabled">Os sintomas:</label>
+                <label for="disabled">Há quanto tempo percebeu os sintomas? Os sintomas:</label>
             </div>
+        </div>
 
+        <div class="row">
             <div class="input-field col s4">
                 <select disabled v-model="data.Tela3.variedadeSintoma">
                     <option value="empty"></option>
@@ -47,10 +49,7 @@
                 </select>
                 <label for="disabled">Ao longo do tempo os sintomas têm:</label>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
                 <select disabled v-model="data.Tela3.medicamento">
                     <option value="empty"></option>
                     <option value="medicamentoSim">Sim</option>
@@ -58,7 +57,7 @@
                 </select>
                 <label for="disabled">Atualmente usa algum medicamento?</label>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s4">
                 <select disabled v-model="data.Tela3.usoContinuo">
                     <option value="empty"></option>
                     <option value="continuoSim">Sim</option>
