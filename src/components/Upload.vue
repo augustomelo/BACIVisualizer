@@ -113,7 +113,12 @@
 
                     if (!file.type.match('xml.*')) {
                         Materialize.toast(file.name + ' não é um arquivo XML!', 5000);
-                        continue;
+                        this.loadedFile = 0;
+                        let self = this;
+                        setTimeout(function() {
+                            self.startedUpload = false;
+                        }, 1000);
+                        break;
                     }
 
                     reader.readAsText(file);
