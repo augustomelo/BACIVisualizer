@@ -22,7 +22,9 @@ All script files on the export session should follow this pattern:
 
 ## Project Organization
 ```
+bateria_avaliativa/ // questionnaire system
 dist/               // production output
+doc/                // documentation (xml, client features, etc)
 node_modules/       // all modules used by the app
 src/                // source folder
 |- assets/          // all the assets used by the project must be in here, such as images
